@@ -18,17 +18,6 @@ app.use(express.static("public"));
 // Comment this line when deploying to Heroku
 mongoose.connect("mongodb://localhost/Budget", {useNewUrlParser: true, useFindAndModify: false});
 
-// Comment this line out when pushing to gitHub (Uncomment when deploying to Heroku)
-    // mongoose.connect(
-    //   process.env.MONGODB_URI || 'mongodb://localhost/Budget',
-    //   {
-    //     useNewUrlParser: true,
-    //     useUnifiedTopology: true,
-    //     useCreateIndex: true,
-    //     useFindAndModify: false
-    //   }
-    // );
-
 // routes
 app.use(require("./routes/api.js"));
 
